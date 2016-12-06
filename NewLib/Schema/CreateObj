@@ -1,0 +1,9 @@
+var Schema = require("schema");
+//return Schema;
+
+return Schema.delete("ravi");
+
+
+
+
+

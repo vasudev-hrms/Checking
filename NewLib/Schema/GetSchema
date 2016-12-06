@@ -1,0 +1,5 @@
+
+
+var schema = require("schema");
+return schema.get("vehicleSchema3");
+

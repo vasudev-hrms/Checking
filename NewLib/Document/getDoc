@@ -1,0 +1,5 @@
+// Import the document module
+var documents = require("document");
+ 
+// Return the document with key "myCountryDocumentKey"
+return documents.get("myCountryDocumentKey1");

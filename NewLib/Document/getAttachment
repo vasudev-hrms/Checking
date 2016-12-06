@@ -1,0 +1,22 @@
+// Import the document module
+var documents = require("document");
+var getDocument = documents.get("myCountryDocumentKey1");
+if(getDocument.metadata.status == "success"){
+    // Name of the file to be retrieved
+    var filename = getDocument.result.attachments;
+    // Retrieve the file by name from the specified document
+    var result = documents.getAttachment("myCountryDocumentKey1", filename);
+    // A good thing to do is to check if you got back a json with info about a failure, else it's a file, write it to the response
+    if (result.metadata && result.metadata.status == "failure") {
+        return file.metadata.errorDetail;
+    } else {
+        //you can also choose to trigger the browser's save as/download feature by uncommenting the following line
+       response.setHeader("content-disposition", "attachment;filename=" + filename);
+ 
+        response.setHeader("content-type","image/png");
+        response.setStatus(200);
+        // Add the CORS headers if you need them.
+        response.addHeaders(configuration.crossDomainHeaders);
+        response.write(result);
+    }
+}

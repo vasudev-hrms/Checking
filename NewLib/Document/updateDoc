@@ -1,0 +1,22 @@
+
+
+    // Import the document module
+    var documents = require("document");
+
+    // Define the document content
+    var fields = {
+        // set the document key
+        "key": "myCountryDocumentKey1",
+        // add a field containing an array of string value called states
+        "states": {"delete":["julien"]},
+        // delete the history field
+        "history": "",
+        // define the types of the fields added above to match their content types
+        "meta.types": {
+            "states": "string",
+            "history": "text"
+        }
+    };
+
+    return documents.update(fields);
+

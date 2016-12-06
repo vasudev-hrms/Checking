@@ -1,0 +1,2 @@
+var docObj = require("document");
+return docObj;

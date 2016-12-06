@@ -1,0 +1,5 @@
+// Import the document module
+var documents = require("document");
+ 
+// Delete the document with key "myCountryDocumentKey" 
+return documents.delete("myCountryDocumentKey123");

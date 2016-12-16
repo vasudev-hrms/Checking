@@ -1,7 +1,0 @@
- var wipe = require('./wipe');
- wipe.wipeAccount();
- var errorArray=new Array(); 
- var script_1 = require("./script_1");
- script_1.run(); 
- errorArray = errorArray.concat(script_1.errorMessages);
- return errorArray;
